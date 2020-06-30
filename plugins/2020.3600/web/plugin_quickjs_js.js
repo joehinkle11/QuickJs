@@ -6,8 +6,8 @@ window.plugin_quickjs_js = {
   returnedValue: null,
   callback: null,
 
-  runJs: function(reqId, data, jsText) {
-    const callback = function() { plugin_quickjs_js.callback(reqId, arguments) }
+  runJs: function(reqId, neverCleanJsCallback, data, jsText) {
+    const callback = function() {plugin_quickjs_js.callback(reqId, neverCleanJsCallback, arguments) }
     plugin_quickjs_js.returnedValue = eval("(function(){"+jsText+"})()")
   },
 

@@ -21,7 +21,7 @@ lib.run = function(params)
 	if runJs then
 		if jsLib == nil then
 			jsLib = require("plugin_quickjs_js")
-			jsLib.addEventListener(function(reqId, arguments)
+			jsLib.addEventListener(function(reqId, neverCleanJsCallback, arguments)
 				local argumentsLua = {}
 				for k,v in pairs(arguments) do
 					argumentsLua[k+1] = v
@@ -36,7 +36,7 @@ lib.run = function(params)
 		end
 		local reqId = reqIdCounter
 		callbackDict[reqId] = callback
-		jsLib.runJs(reqId, data, jsText)
+		jsLib.runJs(reqId, neverCleanJsCallback, data, jsText)
 		local returnedValue = jsLib.returnedValue
 		jsLib.returnedValue = nil
 		reqIdCounter = reqIdCounter + 1
