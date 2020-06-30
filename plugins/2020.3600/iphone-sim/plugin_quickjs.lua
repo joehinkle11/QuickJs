@@ -1,0 +1,1 @@
+/Users/jhinkle/Documents/Experimental/SolarQuickJs/plugins/2020.3600/plugin_quickjs_luaonly.lua
