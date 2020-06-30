@@ -31,8 +31,7 @@ local QuickJs = require "plugin.solarquickjs"
 ```lua
 local returnedMessage = QuickJs.run {
     js = [[
-        var message = "hello from js!"
-        return message
+        return "hello from js!"
     ]],
     lua = function()
         return "hello from lua!"
