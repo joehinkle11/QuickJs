@@ -4,8 +4,6 @@
 
 I've made a quick way to call JavaScript inside Solar2D (formerly Corona SDK). It is open-source, so feel free to make a pull request at https://github.com/joehinkle11/quickjs/
 
-Note: I'm waiting for this to go on the Solar2D plugin directory. If you want to use this before then, just copy the files the root of your project do `local QuickJs = require "plugin_quickjs"`
-
 ## Add following to your `build.settings` to use:
 
 ```lua
